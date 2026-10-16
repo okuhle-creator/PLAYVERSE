@@ -1,0 +1,25 @@
+/* PLAYVERSE Component and Animation Enhancements */
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Reduced motion overrides */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-scale-in,
+  .animate-pulse-glow,
+  .animate-pulse {
+    animation: none !important;
+    transition: none !important;
+  }
+}
